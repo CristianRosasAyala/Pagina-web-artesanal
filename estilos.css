@@ -65,10 +65,6 @@ section .secciones div{
     
 }
 
-.primera-seccion{
-    
-}
-
 .texto-reloj{
     font-size: 200px;
     margin-left: 30%;
@@ -93,9 +89,7 @@ section .secciones div{
 .cambiar-color{
     background-color: blanchedalmond;
 }
-.tercera-seccion{
-    
-}
+
 .countdown{
     
     text-align: center;
@@ -152,4 +146,10 @@ section .secciones div{
     background-color: grey;
     color: whitesmoke;
     transition: .2s;
+}
+#youtube, #maps{
+    text-align: center;
+}
+#subtitulos-cuarta{
+    height: 850px;
 }
