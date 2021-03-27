@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hamburguer/dist/hamburgers.css"> 
+</head>
+<body>
+    <!-- Titulo principal -->
+    <div class="titulo-principal">
+        <h1>Ejercicios Javascript, HTML y CSS3</h1>
+    </div>
+    
+
+    <!-- Boton Hamburguesa -->
+    <div id="hamburguer-button">
+        <button class="hamburger" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
+    <!-- Boton scroll arriba -->
+    <div class="scroll-up">
+        <button>☝🏿</button>
+    </div>
+
+    <!-- Boton modo nocturno -->
+    <div class="boton-dn-container">
+        <button class="boton-dianoche">🌙</button>
+    </div>
+
+    <!-- Secciones -->
+    <section>
+        <div class="secciones">
+            <div class="primera-seccion" id="subtitulos-primera">
+                <h2 >PRIMERA SECCIÓN</h2>
+                <button id="iniciar-btn">Iniciar Reloj</button>
+                <button id="desactivar-btn">Desactivar Reloj</button>
+                <button id="iniciar-alarma-btn">Iniciar Alarma</button>
+                <button id="desactivar-alarma-btn">Desactivar Alarma</button>
+                <audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg"  id='audio'></audio>  
+            </div>
+            <div id="subtitulos-segunda">
+                <h2>SEGUNDA SECCIÓN</h2>
+                <article class="stage">
+                <div id="circulo"></div>
+            </div>
+            <div class="tercera-seccion" id="subtitulos-tercera">
+                <h2>TERCERA SECCIÓN</h2>
+                <div class="countdown">
+                    <h3>Hola mundo esta es la tercera</h3>
+                </div>
+            </div>
+            <div>
+                <h2>CUARTA SECCIÓN</h2>
+            </div>
+            <div>
+                <h2>QUINTA SECCIÓN</h2>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Menu desplegable -->
+    <nav class="menu-nav">
+        <div class="menu-nav__container">
+            <ul>
+                <li><a href="#subtitulos-primera">PRIMERA SECCIÓN</a></li>
+                <li><a href="#subtitulos-segunda">SEGUNDA SECCIÓN</a></li>
+                <li><a href="#subtitulos-tercera">TERCERA SECCIÓN</a></li>
+                <li><a href="#subtitulos-cuarta">CUARTA SECCIÓN</a></li>
+                <li><a href="#subtitulos-quinta">QUINTA SECCIÓN</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+
+    
+      
+
+
+
+
+
+
+
+
+    
+    <script src="principal.js"></script>
+</body>
+</html>
