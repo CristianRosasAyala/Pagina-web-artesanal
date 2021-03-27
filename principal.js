@@ -1,4 +1,7 @@
-//Boton hamburguesa
+
+
+document.addEventListener('DOMContentLoaded', () =>{
+    //Boton hamburguesa
 const $botonHamburguesa = document.querySelector('.hamburger');
 const $menu = document.querySelector('.menu-nav__container');
 
@@ -180,3 +183,4 @@ if (localStorage.getItem('nocturno', 'on')) {
     $botonNocturno = document.querySelector('.boton-dianoche').innerHTML = luna;
     $botonNocturno = document.querySelector('.boton-dianoche').classList.remove('noche');
 }
+})
