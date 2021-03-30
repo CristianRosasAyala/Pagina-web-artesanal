@@ -149,7 +149,19 @@ section .secciones div{
 }
 #youtube, #maps{
     text-align: center;
+    margin: 20px;
+    padding: 20px;
 }
 #subtitulos-cuarta{
-    height: 850px;
+    height: 950px;
+}
+#formulario{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+#formulario input{
+    display: block;
+    margin: auto;
+
 }

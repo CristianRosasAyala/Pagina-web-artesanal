@@ -184,7 +184,7 @@ if (localStorage.getItem('nocturno', 'on')) {
 //Responsive MQ
 const $youtube = document.getElementById('youtube'),
     $maps = document.getElementById('maps');
-$youtube.innerHTML = 'Hola soy cuarta';
+
 let breakpoint = window.matchMedia('(min-width: 1024px)');
 
 
@@ -204,7 +204,24 @@ breakpoint.addEventListener('change', responsive);
 
 responsive(breakpoint);
 
-
+//Páginas 
+document.addEventListener('click', e =>{
+    if (e.target.matches('#btn-abrirVentana')) {
+        console.log('abriendo ventana');
+        let url = document.getElementById('url').value;
+        let ancho = document.getElementById('ancho').value;
+        let largo = document.getElementById('largo').value;
+        
+        if (url && ancho && largo) {
+            console.log(url, ancho, largo);
+            window.open(url);
+            window.innerWidth(largo); // ????????????????
+            window.innerHeight(ancho);
+        }else{
+            alert('Completa los campos');
+        }
+    }
+});
 
 
 
