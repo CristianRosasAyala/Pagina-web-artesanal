@@ -205,20 +205,40 @@ breakpoint.addEventListener('change', responsive);
 responsive(breakpoint);
 
 //Páginas 
+let newUrl;
 document.addEventListener('click', e =>{
-    if (e.target.matches('#btn-abrirVentana')) {
-        console.log('abriendo ventana');
-        let url = document.getElementById('url').value;
-        let ancho = document.getElementById('ancho').value;
-        let largo = document.getElementById('largo').value;
-        
+    //Funcion para abrir
+
+    const abrirVentana = (url = null, ancho = null, largo = null) =>{
         if (url && ancho && largo) {
-            console.log(url, ancho, largo);
-            window.open(url);
-            window.innerWidth(largo); // ????????????????
-            window.innerHeight(ancho);
+            if (newUrl) {
+                newUrl.close();
+                newUrl = null;
+            }
+            console.log('abriendo ventana');
+            newUrl = window.open(url, "", `width=${ancho},height=${largo}`);
+            
         }else{
             alert('Completa los campos');
+        }
+    }
+    
+    //Botón abrir ventana
+    if (e.target.matches('#btn-abrirVentana')) {
+        
+        let url = document.getElementById('url').value,
+            ancho = document.getElementById('ancho').value,
+            largo = document.getElementById('largo').value;
+        abrirVentana(url, ancho, largo);
+    }
+    //Botón cerrar ventana
+    if (e.target.matches('#btn-cerrarVentana')){
+        
+        if (newUrl) {
+            newUrl.close();
+            newUrl = null;
+        }else{
+            alert('No hay ventana para cerrar');
         }
     }
 });
