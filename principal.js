@@ -290,6 +290,46 @@ document.addEventListener('DOMContentLoaded', () =>{
         window.location.href = "https://www.youtube.com";
     } */
 
+
+    //Estado de la red
+    const $estadoRedAviso = document.getElementById('advertencia-red');
+    const estadoRedNormal = () =>{
+        setTimeout(() => {
+            $estadoRedAviso.classList.remove('advertencia-red-online');
+            $estadoRedAviso.classList.remove('advertencia-red-offline');
+            $estadoRedAviso.innerHTML = '';
+        }, 3000);
+        
+        
+    }
+    const estadoRedOnline = () =>{
+        
+        console.log(navigator.onLine);
+        $estadoRedAviso.classList.add('advertencia-red-online');
+        $estadoRedAviso.innerHTML = `<h2>De nuevo en linea</h2>`;
+    }
+    const estadoRedOffline = () =>{
+        
+        console.log(navigator.onLine);
+        $estadoRedAviso.classList.add('advertencia-red-offline');
+        $estadoRedAviso.innerHTML = `<h2>Sin conexión</h2>`;
+
+    }
+    window.addEventListener('online', async e=>{
+        
+        if (navigator.onLine) {
+            await estadoRedOnline();
+            await estadoRedNormal();
+            
+        }
+    } );
+    window.addEventListener('offline',async e=>{
+        if (!navigator.onLine) {
+            await estadoRedOffline();
+            await estadoRedNormal();
+        }
+    })
+
     
 
 

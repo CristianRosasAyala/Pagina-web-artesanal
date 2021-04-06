@@ -165,3 +165,21 @@ section .secciones div{
     margin: auto;
 
 }
+
+#advertencia-red{
+    display: block;
+    transition: .3s;
+    position:fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    top: 0;
+}
+.advertencia-red-online{
+    background-color: rgb(139, 224, 11);
+    transition: .3s;
+}
+.advertencia-red-offline{
+    background-color: rgb(189, 24, 24);
+    transition: .3s;
+}
