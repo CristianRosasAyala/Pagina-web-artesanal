@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     $infoDispositivo.innerHTML = `<ul>
         <li>Info: ${ua}</li>
         <li>Plataforma: ${isDesktop.any() ? isDesktop.any(): isMobile.any()}</li>
-        <li>Buscador: ${browser.any()}</li>
+        <li>Navegador: ${browser.any()}</li>
     </ul>`;
 
     //Contenido exclusivo
@@ -330,8 +330,17 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     })
 
-    
-
+    //Webcam
+     let $camara = document.getElementById('webcam');
+     navigator.mediaDevices.getUserMedia({video:{width:480, height:240}, audio:false})
+        .then(data =>{
+            $camara.srcObject = data;
+            $camara.play();
+        })
+        .catch(er =>{
+            $camara.innerHTML = `Se produjo el siguiente error: ${er}`;
+        })
+       
 
 
 
