@@ -184,11 +184,11 @@ section .secciones div{
     background-color: rgb(189, 24, 24);
     transition: .3s;
 }
-/* #webcam{
+#webcam{
     margin: 50px 35%;
-} */
+}
 .webcam-div{
-    display: flex;
+    display: inline-block;
     justify-content: center;
     
 }
