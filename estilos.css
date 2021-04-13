@@ -47,6 +47,7 @@ section .secciones div{
     opacity: .8;
     left: -29%;
     transition: 1s;
+    overflow-y: auto;
     
 }
 .menu_cambiar{
